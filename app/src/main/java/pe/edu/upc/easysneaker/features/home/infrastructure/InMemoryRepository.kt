@@ -4,7 +4,7 @@ import pe.edu.upc.easysneaker.features.home.domain.Product
 import pe.edu.upc.easysneaker.features.home.domain.ProductRepository
 
 class InMemoryRepository : ProductRepository {
-    val products = listOf(
+    private val products = listOf(
         Product(
             id = 1,
             name = "Product 1",

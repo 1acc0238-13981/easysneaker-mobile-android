@@ -9,7 +9,7 @@ import pe.edu.upc.easysneaker.features.home.application.GetProductsUseCase
 
 class HomeViewModel(private val getProducts: GetProductsUseCase) : ViewModel() {
     private val _uiState = MutableStateFlow(HomeUiState())
-    private val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
+    val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
     fun loadProducts() {
         _uiState.update { currentState ->
