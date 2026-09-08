@@ -20,30 +20,7 @@ import pe.edu.upc.easysneaker.features.home.domain.Product
 fun ProductList(modifier: Modifier = Modifier, products: List<Product>) {
     LazyColumn(modifier = modifier.fillMaxSize()) {
         items(products) { product ->
-            Card(modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp)) {
-                Column(modifier = Modifier.padding(8.dp)) {
-                    AsyncImage(
-                        model = product.imageUrl,
-                        contentDescription = product.name,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(200.dp)
-                    )
-                    Text(
-                        text = product.name,
-                        fontWeight = FontWeight.Bold,
-                    )
-
-                    Text(
-                        text = "$ ${product.price}"
-                    )
-
-                }
-            }
-
-
+          ProductCard( product = product)
         }
 
     }
