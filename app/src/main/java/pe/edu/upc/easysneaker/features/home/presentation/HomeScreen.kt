@@ -6,13 +6,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 import pe.edu.upc.easysneaker.core.theme.EasySneakerTheme
 
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
-    viewModel: HomeViewModel
+    viewModel: HomeViewModel = viewModel()
 ) {
 
     val state = viewModel.uiState.collectAsState().value
@@ -38,5 +39,6 @@ fun HomeScreen(
 @Composable
 fun HomeScreenPreview() {
     EasySneakerTheme {
+        HomeScreen(viewModel = viewModel())
     }
 }
