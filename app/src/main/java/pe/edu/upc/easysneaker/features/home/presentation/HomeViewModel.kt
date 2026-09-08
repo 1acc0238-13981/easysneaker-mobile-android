@@ -1,4 +1,36 @@
 package pe.edu.upc.easysneaker.features.home.presentation
 
-class HomeViewModel {
+import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+import pe.edu.upc.easysneaker.features.home.application.GetProductsUseCase
+
+class HomeViewModel(private val getProducts: GetProductsUseCase) : ViewModel() {
+    private val _uiState = MutableStateFlow(HomeUiState())
+    private val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
+
+    fun loadProducts() {
+        _uiState.update { currentState ->
+            currentState.copy(isLoading = true, errorMessage = null)
+        }
+
+        try {
+            val products = getProducts()
+            _uiState.update { currentState ->
+                currentState.copy(products = products, isLoading = false)
+            }
+
+        } catch (e: Exception) {
+            _uiState.update { currentState ->
+                currentState.copy(isLoading = false, errorMessage = e.message)
+            }
+        }
+    }
+
+    init {
+        loadProducts()
+    }
+
 }
