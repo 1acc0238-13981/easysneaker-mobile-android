@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker
+package pe.edu.upc.easysneaker.features.home.presentation
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,7 +14,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import pe.edu.upc.easysneaker.ui.theme.EasySneakerTheme
+import pe.edu.upc.easysneaker.features.home.domain.Product
+import pe.edu.upc.easysneaker.core.theme.EasySneakerTheme
 
 @Composable
 fun HomeScreen() {

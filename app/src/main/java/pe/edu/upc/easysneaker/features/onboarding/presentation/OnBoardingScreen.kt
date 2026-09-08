@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker
+package pe.edu.upc.easysneaker.features.onboarding.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -21,8 +21,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pe.edu.upc.easysneaker.ui.arrowForward
-import pe.edu.upc.easysneaker.ui.theme.EasySneakerTheme
+import pe.edu.upc.easysneaker.R
+import pe.edu.upc.easysneaker.core.arrowForward
+import pe.edu.upc.easysneaker.core.theme.EasySneakerTheme
 
 @Composable
 fun OnBoardingScreen() {

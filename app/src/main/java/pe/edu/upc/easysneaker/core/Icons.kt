@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker.ui
+package pe.edu.upc.easysneaker.core
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
@@ -57,7 +57,7 @@ private var _arrowForward: ImageVector? = null
 
 
 @Suppress("CheckReturnValue")
-public val visibility: ImageVector
+val visibility: ImageVector
     get() {
         if (_visibility != null) {
             return _visibility!!
@@ -80,7 +80,7 @@ public val visibility: ImageVector
                         strokeLineCap = StrokeCap.Butt,
                         strokeLineJoin = StrokeJoin.Bevel,
                         strokeLineMiter = 1f,
-                        pathFillType = PathFillType.Companion.NonZero,
+                        pathFillType = PathFillType.NonZero,
                     ) {
                         moveTo(15.19f, 14.69f)
                         quadTo(16.5f, 13.38f, 16.5f, 11.5f)
@@ -157,7 +157,7 @@ val visibilityOff: ImageVector
                         strokeLineCap = StrokeCap.Butt,
                         strokeLineJoin = StrokeJoin.Bevel,
                         strokeLineMiter = 1f,
-                        pathFillType = PathFillType.Companion.NonZero,
+                        pathFillType = PathFillType.NonZero,
                     ) {
                         moveTo(16.1f, 13.3f)
                         lineTo(14.65f, 11.85f)

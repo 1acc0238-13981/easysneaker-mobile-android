@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker.ui.theme
+package pe.edu.upc.easysneaker.core.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

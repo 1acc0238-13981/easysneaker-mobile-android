@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker
+package pe.edu.upc.easysneaker.features.auth.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,9 +20,9 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import pe.edu.upc.easysneaker.ui.theme.EasySneakerTheme
-import pe.edu.upc.easysneaker.ui.visibility
-import pe.edu.upc.easysneaker.ui.visibilityOff
+import pe.edu.upc.easysneaker.core.theme.EasySneakerTheme
+import pe.edu.upc.easysneaker.core.visibility
+import pe.edu.upc.easysneaker.core.visibilityOff
 
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier) {

@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker
+package pe.edu.upc.easysneaker.features.home.domain
 
 data class Product(
     val id: Int,
