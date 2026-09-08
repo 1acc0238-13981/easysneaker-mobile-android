@@ -88,16 +88,6 @@ private val darkScheme = darkColorScheme(
 )
 
 
-@Immutable
-data class ColorFamily(
-    val color: Color,
-    val onColor: Color,
-    val colorContainer: Color,
-    val onColorContainer: Color
-)
-
-
-
 @Composable
 fun EasySneakerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
