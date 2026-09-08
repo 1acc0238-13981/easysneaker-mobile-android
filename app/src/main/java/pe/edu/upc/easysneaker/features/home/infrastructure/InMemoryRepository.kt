@@ -1,7 +1,9 @@
 package pe.edu.upc.easysneaker.features.home.infrastructure
 
+import kotlinx.coroutines.delay
 import pe.edu.upc.easysneaker.features.home.domain.Product
 import pe.edu.upc.easysneaker.features.home.domain.ProductRepository
+import kotlin.time.Duration.Companion.milliseconds
 
 class InMemoryRepository : ProductRepository {
     private val products = listOf(
@@ -19,7 +21,8 @@ class InMemoryRepository : ProductRepository {
         )
     )
 
-    override fun getProducts(): List<Product> {
+    override suspend fun getProducts(): List<Product> {
+        delay(2000.milliseconds)
         return products
     }
 
