@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.bumptech.glide.Glide
+import coil3.compose.AsyncImage
 import pe.edu.upc.easysneaker.ui.theme.EasySneakerTheme
 
 @Composable
@@ -32,15 +32,15 @@ fun HomeScreen() {
 
     LazyColumn {
         items(products) { product ->
-            Card (modifier = Modifier.padding(8.dp)) {
+            Card(modifier = Modifier.padding(8.dp)) {
                 Column {
-                    
+                    AsyncImage(model = product.imageUrl, contentDescription = product.name)
                     Text(text = product.name, modifier = Modifier.padding(8.dp))
 
                 }
             }
 
-            
+
         }
 
     }
