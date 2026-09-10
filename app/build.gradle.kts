@@ -59,6 +59,11 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
 
+    // ViewModel Compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
 }
