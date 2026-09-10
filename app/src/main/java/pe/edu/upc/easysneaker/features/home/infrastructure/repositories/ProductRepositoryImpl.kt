@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ProductRepositoryImpl(
     private val service: ProductService
     = Retrofit.Builder()
-        .baseUrl("https://sneakerapi-y3ub.onrender.com/api")
+        .baseUrl("https://sneakerapi-y3ub.onrender.com/api/")
         .addConverterFactory(GsonConverterFactory.create())
         .build().create(ProductService::class.java)
 ) : ProductRepository {
