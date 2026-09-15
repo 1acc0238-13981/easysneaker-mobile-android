@@ -12,6 +12,7 @@ composeBom = "2026.09.00"
 retrofit = "3.0.0"
 ksp = "2.3.4"
 hilt = "2.60.1"
+hiltNavigationCompose = "1.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +40,7 @@ converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref
 
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
