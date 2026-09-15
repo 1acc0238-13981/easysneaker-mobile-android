@@ -3,8 +3,6 @@ package pe.edu.upc.easysneaker.features.home.infrastructure.repositories
 import pe.edu.upc.easysneaker.features.home.domain.Product
 import pe.edu.upc.easysneaker.features.home.domain.ProductRepository
 import pe.edu.upc.easysneaker.features.home.infrastructure.remote.ProductService
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 class ProductRepositoryImpl @Inject constructor(
