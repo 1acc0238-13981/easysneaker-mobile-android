@@ -26,4 +26,8 @@ class InMemoryRepository : ProductRepository {
         return products
     }
 
+    override suspend fun getProductById(id: Int): Product? {
+        return products.find { it.id == id }
+    }
+
 }

@@ -8,4 +8,7 @@ interface ProductService {
     @GET("products")
     suspend fun getProducts(): Response<ProductsResponseDto>
 
+    @GET("product/{id}")
+    suspend fun getProductById(id: Int): Response<ProductDto>
+
 }

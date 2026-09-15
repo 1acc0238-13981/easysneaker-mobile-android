@@ -26,4 +26,8 @@ class ProductRepositoryImpl @Inject constructor(
         }
         return emptyList()
     }
+
+    override suspend fun getProductById(id: Int): Product? {
+        TODO("Not yet implemented")
+    }
 }
