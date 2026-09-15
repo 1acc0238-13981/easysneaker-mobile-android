@@ -2,13 +2,14 @@ package pe.edu.upc.easysneaker.features.home.infrastructure.remote
 
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface ProductService {
 
     @GET("products")
     suspend fun getProducts(): Response<ProductsResponseDto>
 
-    @GET("product/{id}")
-    suspend fun getProductById(id: Int): Response<ProductDto>
+    @GET("products/{id}")
+    suspend fun getProductById(@Path("id") id: Int): Response<ProductDto>
 
 }

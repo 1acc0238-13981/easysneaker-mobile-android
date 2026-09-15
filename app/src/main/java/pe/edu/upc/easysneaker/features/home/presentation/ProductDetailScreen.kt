@@ -1,6 +1,7 @@
 package pe.edu.upc.easysneaker.features.home.presentation
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -15,7 +16,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import coil3.compose.AsyncImage
-import pe.edu.upc.easysneaker.core.visibility
+import pe.edu.upc.easysneaker.core.arrowBack
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -37,7 +38,7 @@ fun ProductDetailScreen(
         topBar = {
             TopAppBar(title = {}, navigationIcon = {
                 IconButton(onClick = onBack) {
-                    Icon(visibility, contentDescription = "back")
+                    Icon(arrowBack, contentDescription = "back")
                 }
             })
         }
@@ -54,7 +55,8 @@ fun ProductDetailScreen(
                 is ProductDetailUiState.Success -> {
                     AsyncImage(
                         model = uiState.product.imageUrl,
-                        contentDescription = uiState.product.name
+                        contentDescription = uiState.product.name,
+                        modifier = Modifier.fillMaxWidth()
                     )
                 }
 

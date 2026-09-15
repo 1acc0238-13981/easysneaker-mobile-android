@@ -14,11 +14,16 @@ import coil3.compose.AsyncImage
 import pe.edu.upc.easysneaker.features.home.domain.Product
 
 @Composable
-fun ProductCard(modifier: Modifier = Modifier, product: Product) {
+fun ProductCard(
+    modifier: Modifier = Modifier,
+    product: Product,
+    onProductClick: () -> Unit
+) {
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(8.dp)
+            .padding(8.dp),
+        onClick = onProductClick
     ) {
         Column(modifier = Modifier.padding(8.dp)) {
             AsyncImage(

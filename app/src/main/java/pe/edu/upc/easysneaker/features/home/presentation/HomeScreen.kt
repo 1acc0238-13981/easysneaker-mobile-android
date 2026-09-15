@@ -14,13 +14,15 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 import pe.edu.upc.easysneaker.core.theme.EasySneakerTheme
+import pe.edu.upc.easysneaker.features.home.domain.Product
 
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = hiltViewModel(),
+    onProductClick: (Product) -> Unit
 
-    ) {
+) {
 
     val state = viewModel.uiState.collectAsState().value
 
@@ -31,7 +33,13 @@ fun HomeScreen(
     ) {
         when {
             state.products.isNotEmpty() -> {
-                ProductList(modifier = modifier, products = state.products)
+                ProductList(
+                    modifier = modifier,
+                    products = state.products,
+                    onProductClick = onProductClick
+                )
+
+
             }
 
             state.isLoading -> {
@@ -45,7 +53,6 @@ fun HomeScreen(
     }
 
 
-
 }
 
 
@@ -53,6 +60,6 @@ fun HomeScreen(
 @Composable
 fun HomeScreenPreview() {
     EasySneakerTheme {
-        HomeScreen(viewModel = viewModel())
+        HomeScreen(viewModel = hiltViewModel()) {}
     }
 }
