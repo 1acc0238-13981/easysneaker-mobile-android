@@ -1,10 +1,12 @@
-package pe.edu.upc.easysneaker.features.home.presentation
+package pe.edu.upc.easysneaker.features.home.presentation.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
 import kotlinx.serialization.Serializable
+import pe.edu.upc.easysneaker.features.home.presentation.home.HomeScreen
+import pe.edu.upc.easysneaker.features.home.presentation.productdetail.ProductDetailScreen
 
 @Serializable
 object HomeRoute

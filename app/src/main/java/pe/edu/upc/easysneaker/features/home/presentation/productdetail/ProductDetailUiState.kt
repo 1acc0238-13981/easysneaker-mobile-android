@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker.features.home.presentation
+package pe.edu.upc.easysneaker.features.home.presentation.productdetail
 
 import pe.edu.upc.easysneaker.features.home.domain.Product
 

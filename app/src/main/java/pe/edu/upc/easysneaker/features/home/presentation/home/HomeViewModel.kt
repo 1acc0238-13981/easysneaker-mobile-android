@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker.features.home.presentation
+package pe.edu.upc.easysneaker.features.home.presentation.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
