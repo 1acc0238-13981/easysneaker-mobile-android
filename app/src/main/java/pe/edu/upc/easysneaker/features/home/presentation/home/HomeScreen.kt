@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 
-import pe.edu.upc.easysneaker.core.theme.EasySneakerTheme
+import pe.edu.upc.easysneaker.core.designsystem.theme.EasySneakerTheme
 import pe.edu.upc.easysneaker.features.home.domain.Product
 import pe.edu.upc.easysneaker.features.home.presentation.home.components.ProductList
 

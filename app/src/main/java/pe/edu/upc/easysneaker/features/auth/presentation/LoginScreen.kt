@@ -20,9 +20,9 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import pe.edu.upc.easysneaker.core.theme.EasySneakerTheme
-import pe.edu.upc.easysneaker.core.visibility
-import pe.edu.upc.easysneaker.core.visibilityOff
+import pe.edu.upc.easysneaker.core.designsystem.theme.EasySneakerTheme
+import pe.edu.upc.easysneaker.core.designsystem.icon.visibility
+import pe.edu.upc.easysneaker.core.designsystem.icon.visibilityOff
 
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier) {

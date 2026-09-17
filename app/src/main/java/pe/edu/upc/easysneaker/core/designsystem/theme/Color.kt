@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker.core.theme
+package pe.edu.upc.easysneaker.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -16,7 +16,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import coil3.compose.AsyncImage
-import pe.edu.upc.easysneaker.core.arrowBack
+import pe.edu.upc.easysneaker.core.designsystem.icon.arrowBack
 
 
 @OptIn(ExperimentalMaterial3Api::class)
