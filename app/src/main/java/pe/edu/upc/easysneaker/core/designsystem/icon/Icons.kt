@@ -229,7 +229,7 @@ val visibilityOff: ImageVector
 private var _visibilityOff: ImageVector? = null
 
 @Suppress("CheckReturnValue")
-public val arrowBack: ImageVector
+val arrowBack: ImageVector
     get() {
         if (_arrowBack != null) {
             return _arrowBack!!
