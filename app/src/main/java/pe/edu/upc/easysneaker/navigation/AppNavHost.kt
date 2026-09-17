@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker.core
+package pe.edu.upc.easysneaker.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
