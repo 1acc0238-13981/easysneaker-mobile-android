@@ -7,13 +7,14 @@ espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.11.0"
 activityCompose = "1.13.0"
 kotlin = "2.4.20"
-coilCompose = "3.6.2"
+coilCompose = "3.6.3"
 composeBom = "2026.09.00"
 retrofit = "3.0.0"
 ksp = "2.3.4"
 hilt = "2.60.1"
 hiltNavigationCompose = "1.4.0"
 kotlinSerialization = "2.4.20"
+room = "2.8.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +43,10 @@ converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room"}
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room"}
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
