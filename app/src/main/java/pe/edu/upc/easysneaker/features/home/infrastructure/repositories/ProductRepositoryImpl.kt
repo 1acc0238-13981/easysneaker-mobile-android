@@ -52,17 +52,28 @@ class ProductRepositoryImpl @Inject constructor(
 
             if (response.isSuccessful) {
                 response.body()?.let { productDto ->
-                    return Product(
+                    val entity = ProductEntity(
                         id = productDto.id,
                         name = productDto.name,
                         price = productDto.price,
-                        imageUrl = productDto.image
+                        image = productDto.image,
+                        rating = productDto.rating
                     )
+                    dao.insertProducts(listOf(entity))
                 }
             }
         } catch (e: Exception) {
         }
 
-        return null
+        return dao.fetchProductById(id)?.let { entity ->
+            Product(
+                id = entity.id,
+                name =  entity.name,
+                price = entity.price,
+                imageUrl = entity.image
+            )
+        }
+
+
     }
 }

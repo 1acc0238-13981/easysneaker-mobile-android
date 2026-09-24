@@ -16,6 +16,6 @@ interface ProductDao {
     suspend fun insertProducts(entities: List<ProductEntity>)
 
     @Query("select * from products where id = :id")
-    suspend fun fetchProductById(id: Int): Product?
+    suspend fun fetchProductById(id: Int): ProductEntity?
 
 }
