@@ -66,6 +66,7 @@ fun ProductDetailScreen(
                             contentDescription = uiState.product.name,
                             modifier = Modifier.fillMaxWidth()
                         )
+                        Text(text = uiState.product.name)
                     }
 
                 }
