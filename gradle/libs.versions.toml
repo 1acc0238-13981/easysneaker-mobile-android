@@ -14,7 +14,7 @@ ksp = "2.3.4"
 hilt = "2.60.1"
 hiltNavigationCompose = "1.4.0"
 kotlinSerialization = "2.4.20"
-room = "2.8.5"
+room = "3.0.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,8 +44,8 @@ hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt"
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 
-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room"}
-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room"}
+room-runtime = { module = "androidx.room3:room3-runtime", version.ref = "room"}
+room-compiler = { module = "androidx.room3:room3-compiler", version.ref = "room"}
 
 
 [plugins]
