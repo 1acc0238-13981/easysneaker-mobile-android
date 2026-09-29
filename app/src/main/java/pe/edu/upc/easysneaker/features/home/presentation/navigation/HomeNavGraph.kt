@@ -20,7 +20,6 @@ data class ProductDetailRoute(val id: Int)
 
 fun NavGraphBuilder.homeNavGraph(navController: NavController) {
 
-
     navigation<HomeNavGraphRoute>(startDestination = HomeRoute) {
         composable<HomeRoute> {
             HomeScreen { product ->
@@ -33,8 +32,6 @@ fun NavGraphBuilder.homeNavGraph(navController: NavController) {
             ProductDetailScreen(id = productDetail.id) {
                 navController.popBackStack()
             }
-
         }
     }
-
 }

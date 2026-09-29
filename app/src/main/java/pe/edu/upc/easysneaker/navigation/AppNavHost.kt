@@ -7,7 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import pe.edu.upc.easysneaker.features.home.presentation.navigation.HomeRoute
+import pe.edu.upc.easysneaker.features.auth.presentation.navigation.AuthNavGraphRoute
+import pe.edu.upc.easysneaker.features.auth.presentation.navigation.authNavGraph
 import pe.edu.upc.easysneaker.features.home.presentation.navigation.homeNavGraph
 
 @Composable
@@ -20,9 +21,10 @@ fun AppNavHost(navController: NavHostController) {
     ){ paddingValues ->
         NavHost(
             navController = navController,
-            startDestination = HomeRoute,
+            startDestination = AuthNavGraphRoute,
             modifier = Modifier.padding(paddingValues)
         ) {
+            authNavGraph(navController)
             homeNavGraph(navController)
         }
     }
