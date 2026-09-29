@@ -46,7 +46,11 @@ class LoginViewModel @Inject constructor(private val signIn: LoginUseCase) : Vie
             result
                 .onSuccess { user ->
                     _state.update { currentState ->
-                        currentState.copy(isLoading = false, isAuthenticated = true, user = user)
+                        currentState.copy(
+                            isLoading = false,
+                            isAuthenticated = true,
+                            user = user
+                        )
                     }
                 }
                 .onFailure { exception ->

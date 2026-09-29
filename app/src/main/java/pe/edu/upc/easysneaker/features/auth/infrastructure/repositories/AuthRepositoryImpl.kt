@@ -19,7 +19,7 @@ class AuthRepositoryImpl @Inject constructor(private val service: AuthService) :
                 response.body()?.let { dto ->
                     val user = User(
                         email = dto.email,
-                        firstName = dto.fistName,
+                        firstName = dto.firstName,
                         lastName = dto.lastName
                     )
                     return Result.success(user)

@@ -13,6 +13,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,9 +27,20 @@ import pe.edu.upc.easysneaker.core.designsystem.icon.visibility
 import pe.edu.upc.easysneaker.core.designsystem.icon.visibilityOff
 
 @Composable
-fun LoginScreen(modifier: Modifier = Modifier, viewModel: LoginViewModel = hiltViewModel()) {
+fun LoginScreen(
+    modifier: Modifier = Modifier,
+    viewModel: LoginViewModel = hiltViewModel(),
+    onLoginSuccess: () -> Unit
+) {
+
 
     val state = viewModel.state.collectAsState().value
+
+    LaunchedEffect(state) {
+        if (state.isAuthenticated) {
+            onLoginSuccess()
+        }
+    }
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -75,7 +87,12 @@ fun LoginScreen(modifier: Modifier = Modifier, viewModel: LoginViewModel = hiltV
         )
 
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = viewModel::login, modifier = Modifier.padding(16.dp)) {
+        Button(
+            onClick = viewModel::login,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+        ) {
             Text("Sign in")
         }
     }
@@ -86,6 +103,6 @@ fun LoginScreen(modifier: Modifier = Modifier, viewModel: LoginViewModel = hiltV
 @Composable
 fun LoginScreenPreview() {
     EasySneakerTheme {
-        LoginScreen()
+        LoginScreen {}
     }
 }
