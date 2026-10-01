@@ -1,4 +1,4 @@
-package pe.edu.upc.easysneaker.features.cart.presentation
+package pe.edu.upc.easysneaker.features.cart.presentation.cart
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
