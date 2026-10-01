@@ -14,11 +14,7 @@ import pe.edu.upc.easysneaker.features.home.presentation.navigation.homeNavGraph
 @Composable
 fun AppNavHost(navController: NavHostController) {
 
-    Scaffold (
-        bottomBar = {
-            NavigationBar { }
-        }
-    ){ paddingValues ->
+    Scaffold{ paddingValues ->
         NavHost(
             navController = navController,
             startDestination = AuthNavGraphRoute,
