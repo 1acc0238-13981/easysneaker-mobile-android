@@ -18,6 +18,10 @@ data class CartViewModel @Inject constructor(private val getCart: GetCartUseCase
     private val _state = MutableStateFlow(CartUiState())
     val state: StateFlow<CartUiState> = _state.asStateFlow()
 
+    init {
+        loadCart()
+    }
+
     fun loadCart() {
         viewModelScope.launch(Dispatchers.IO) {
 
