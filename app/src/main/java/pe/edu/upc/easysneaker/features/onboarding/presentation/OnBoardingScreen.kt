@@ -26,7 +26,9 @@ import pe.edu.upc.easysneaker.core.designsystem.icon.arrowForward
 import pe.edu.upc.easysneaker.core.designsystem.theme.EasySneakerTheme
 
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(
+    onNext: () -> Unit
+) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize()
@@ -54,14 +56,18 @@ fun OnBoardingScreen() {
         Spacer(modifier = Modifier.weight(1f))
 
         IconButton(
-            onClick = {},
+            onClick = onNext,
+            modifier = Modifier.size(48.dp),
             colors = IconButtonDefaults.iconButtonColors(
-                containerColor = MaterialTheme.colorScheme.primaryContainer
-            ),
-            modifier = Modifier.size(48.dp)
+                containerColor = MaterialTheme.colorScheme.primary
+            )
 
         ) {
-            Icon(arrowForward, contentDescription = "forward")
+            Icon(
+                arrowForward,
+                contentDescription = "forward",
+                tint = MaterialTheme.colorScheme.onPrimary
+            )
         }
 
         Spacer(modifier = Modifier.weight(1f))
@@ -75,6 +81,6 @@ fun OnBoardingScreen() {
 @Composable
 fun OnBoardingScreenPreview() {
     EasySneakerTheme {
-        OnBoardingScreen()
+        OnBoardingScreen {}
     }
 }
