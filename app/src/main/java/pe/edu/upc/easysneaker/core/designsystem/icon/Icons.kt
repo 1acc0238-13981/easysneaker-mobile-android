@@ -321,7 +321,7 @@ private var _home: ImageVector? = null
 
 
 @Suppress("CheckReturnValue")
-public val shoppingCart: ImageVector
+val shoppingCart: ImageVector
     get() {
         if (_shoppingCart != null) {
             return _shoppingCart!!
@@ -344,7 +344,7 @@ public val shoppingCart: ImageVector
                         strokeLineCap = StrokeCap.Butt,
                         strokeLineJoin = StrokeJoin.Bevel,
                         strokeLineMiter = 1f,
-                        pathFillType = PathFillType.Companion.NonZero,
+                        pathFillType = PathFillType.NonZero,
                     ) {
                         moveTo(5.59f, 21.41f)
                         quadTo(5f, 20.83f, 5f, 20f)
