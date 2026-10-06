@@ -10,20 +10,21 @@ import pe.edu.upc.easysneaker.features.auth.presentation.navigation.AuthNavGraph
 import pe.edu.upc.easysneaker.features.auth.presentation.navigation.authNavGraph
 import pe.edu.upc.easysneaker.features.cart.presentation.navigation.cartNavGraph
 import pe.edu.upc.easysneaker.features.home.presentation.navigation.homeNavGraph
+import pe.edu.upc.easysneaker.features.main.mainNavGraph
+import pe.edu.upc.easysneaker.features.onboarding.presentation.navigation.OnBoardingNavGraphRoute
+import pe.edu.upc.easysneaker.features.onboarding.presentation.navigation.onBoardingNavGraph
 
 @Composable
 fun AppNavHost(navController: NavHostController) {
 
-    Scaffold { paddingValues ->
         NavHost(
             navController = navController,
-            startDestination = AuthNavGraphRoute,
-            modifier = Modifier.padding(paddingValues)
-        ) {
+            startDestination = OnBoardingNavGraphRoute) {
+            onBoardingNavGraph(navController)
             authNavGraph(navController)
-            homeNavGraph(navController)
-            cartNavGraph(navController)
+            mainNavGraph()
+
         }
-    }
+
 
 }
